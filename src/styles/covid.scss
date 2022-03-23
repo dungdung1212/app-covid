@@ -1,0 +1,64 @@
+.list__countries>h2{
+    color: red;
+    font-weight: 900;
+    text-align: center;
+}
+.list__countries-covid{
+    max-height: 500px;
+    overflow: auto;
+    list-style-type: none;
+    text-align: left;
+    .li__countries-covid{ 
+        border: 1px solid beige;
+        border-bottom: 0px;
+        padding: 0.3rem;
+        display: flex;
+        &__name{
+            width: 80%;
+            border-right: 1px solid beige;
+        }
+        &__btn{
+            width: 20%;
+            margin: 1%;
+           label{ 
+            background-color: black;
+            color: white;
+            font-size: 1rem;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 4px;
+            outline: none;
+            border: 3px solid #42FBF2;
+            position: relative;
+            z-index: 1;
+           // transition: ease-out 0.3s ;
+           }
+           label:hover{
+               color: black;
+               cursor: pointer;
+               background-color: #42FBF2;
+               transition: 0.5s all ease;
+           } 
+        }
+    }
+    li:last-child {
+        border-bottom: 1px solid beige;
+      }
+}
+.show__popup{
+    display: none;
+}
+.check__input:checked ~ .show__popup{
+   display: block; 
+}  
+ @media screen  and (max-width: 599px) {
+     .list__countries-covid>.li__countries-covid{ 
+         .li__countries-covid__name{
+             width: 50%;
+         }
+         .li__countries-covid__btn{
+            width: 50%;
+            margin: 1rem;
+        }
+     } 
+ }
